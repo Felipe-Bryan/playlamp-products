@@ -1,0 +1,15 @@
+import { ItemToOrderType } from '../types/ItemToOrderType';
+
+export function productToList(product: ItemToOrderType) {
+  return `<div class="container p-0">
+    <div class="row m-0 p-1">
+        <div class="col-8 p-0 d-flex align-items-center">${product.name}</div>
+        <div class="col p-0 d-flex justify-content-end align-items-center">
+            <button type="button" class="btn btn-danger">-</button>
+            <div class="m-2 w-50 d-flex justify-content-center align-items-center" id="${product.id}-qt">${product.qt}</div>
+            <button type="button" class="btn btn-success">+</button>
+        </div>
+    </div>
+    <hr class="m-0" />
+</div>`;
+}

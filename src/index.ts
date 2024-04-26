@@ -1,5 +1,7 @@
-import { addItem } from './functions/pages/addItem';
-import { removeItem } from './functions/pages/removeItem';
+import { productsDB } from './database/products';
+import { startNewOrder } from './functions/page-functions/startNewOrder';
+import { addItem } from './functions/page-functions/addItem';
+import { removeItem } from './functions/page-functions/removeItem';
 import { startHome } from './functions/pages/startHome';
 
 startHome();
@@ -16,4 +18,9 @@ document.querySelectorAll('.removeBtn').forEach((btn) => {
     const itemId = btn.id.replace('remove-', '');
     removeItem(itemId);
   });
+});
+
+document.getElementById('newOrder')!.addEventListener('click', () => {
+  startNewOrder(productsDB);
+  location.reload();
 });

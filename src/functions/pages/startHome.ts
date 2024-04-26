@@ -2,9 +2,9 @@ import { categoriesDB } from '../../database/categories';
 import { productsDB } from '../../database/products';
 import { ItemToOrderType } from '../../types/ItemToOrderType';
 import { getStorageData } from '../general/getStorageData';
-import { startNewOrder } from '../general/startNewOrder';
-import { placeCategoriesHome } from './placeCategoriesHome';
-import { placeProductsHome } from './placeProductsHome';
+import { startNewOrder } from '../page-functions/startNewOrder';
+import { placeCategoriesHome } from '../page-functions/placeCategoriesHome';
+import { placeProductsHome } from '../page-functions/placeProductsHome';
 
 export function startHome() {
   const home = document.getElementById('fullList')!;

@@ -1,6 +1,6 @@
 import { ItemToOrderType } from '../../types/ItemToOrderType';
 
-export function sumTotalOrder(order: ItemToOrderType[]) {
+export function sumTotalOrder(order: ItemToOrderType[]): void {
   const totalSpot = document.getElementById('totalValue')!;
   let total = 0;
 

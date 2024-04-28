@@ -1,6 +1,6 @@
 import { ItemToOrderType } from '../types/ItemToOrderType';
 
-export function productToTableMarked(product: ItemToOrderType) {
+export function productToTableMarked(product: ItemToOrderType): string | undefined {
   if (product.qt > 0) {
     return `<tr>
         <td>${product.name}</td>

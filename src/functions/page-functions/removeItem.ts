@@ -2,7 +2,7 @@ import { ItemToOrderType } from '../../types/ItemToOrderType';
 import { getStorageData } from '../general/getStorageData';
 import { saveToStorage } from '../general/saveToStorage';
 
-export function removeItem(id: string) {
+export function removeItem(id: string): void {
   let order: ItemToOrderType[] = getStorageData('order');
 
   for (let i = 0; i < order.length; i++) {

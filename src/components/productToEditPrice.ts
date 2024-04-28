@@ -1,6 +1,6 @@
 import { ProductType } from '../types/ProductType';
 
-export function productToEditPrice(product: ProductType) {
+export function productToEditPrice(product: ProductType): string | undefined {
   return `<div class="container p-0">
  <div class="row m-0 p-1">
      <div class="col-8 p-0 d-flex align-items-center">${product.name}</div>

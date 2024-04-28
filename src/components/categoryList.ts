@@ -1,6 +1,6 @@
 import { CategoryType } from '../types/CategoryType';
 
-export function categoryItem(category: CategoryType) {
+export function categoryItem(category: CategoryType): string | undefined {
   return `<div class="accordion-item">
     <h2 class="accordion-header" id="heading-${category.id}">
     <button

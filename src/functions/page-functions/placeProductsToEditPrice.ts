@@ -1,7 +1,7 @@
 import { productToEditPrice } from '../../components/productToEditPrice';
 import { ProductType } from '../../types/ProductType';
 
-export function placeProductsToEditPrice(products: ProductType[]) {
+export function placeProductsToEditPrice(products: ProductType[]): void {
   const categoriesArray = document.querySelectorAll('.category');
 
   console.log(categoriesArray);

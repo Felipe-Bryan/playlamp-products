@@ -7,7 +7,7 @@ import { placeCategoriesHome } from '../page-functions/placeCategoriesHome';
 import { placeProductsHome } from '../page-functions/placeProductsHome';
 import { componentVisibility } from '../page-functions/componentVisibility';
 
-export function startHome() {
+export function startHome(): void {
   const home = document.getElementById('fullList')!;
 
   home.innerHTML = '';

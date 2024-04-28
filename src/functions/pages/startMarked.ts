@@ -3,7 +3,7 @@ import { componentVisibility } from '../page-functions/componentVisibility';
 import { placeMarkedProducts } from '../page-functions/placeMarkedProducts';
 import { sumTotalOrder } from '../page-functions/sumTotalOrder';
 
-export function startMarked() {
+export function startMarked(): void {
   const listItems = document.getElementById('listItems')!;
   listItems.innerHTML = '';
 

@@ -1,7 +1,7 @@
 import { productToList } from '../../components/productToList';
 import { ItemToOrderType } from '../../types/ItemToOrderType';
 
-export function placeProductsHome(products: ItemToOrderType[]) {
+export function placeProductsHome(products: ItemToOrderType[]): void {
   const categoriesArray = document.querySelectorAll('.category');
 
   products.forEach((product) => {

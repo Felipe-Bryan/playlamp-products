@@ -15,17 +15,12 @@ export function startHome() {
     newOrder = startNewOrder(productsDB);
   }
 
-  //   if (newOrder.length === 0) {
-  //     newOrder = startNewOrder(productsDB);
-  //   } else {
-  //     let startNew = confirm('Existe um pedido não finalizado, iniciar novo pedido?');
-  //     if (startNew) {
-  //       newOrder = startNewOrder(productsDB);
-  //     }
-  //   }
+  componentVisibility('fullList', 'show');
   componentVisibility('newOrder', 'show');
   componentVisibility('showOrder', 'show');
   componentVisibility('orderTable', 'hide');
+  componentVisibility('home', 'hide');
+  componentVisibility('saveOrder', 'hide');
   placeCategoriesHome(categoriesDB, home);
   placeProductsHome(newOrder);
 }

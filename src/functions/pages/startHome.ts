@@ -10,6 +10,8 @@ import { componentVisibility } from '../page-functions/componentVisibility';
 export function startHome() {
   const home = document.getElementById('fullList')!;
 
+  home.innerHTML = '';
+
   let newOrder: ItemToOrderType[] = getStorageData('order');
   if (newOrder.length === 0) {
     newOrder = startNewOrder(productsDB);

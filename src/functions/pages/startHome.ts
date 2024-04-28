@@ -6,6 +6,8 @@ import { startNewOrder } from '../page-functions/startNewOrder';
 import { placeCategoriesHome } from '../page-functions/placeCategoriesHome';
 import { placeProductsHome } from '../page-functions/placeProductsHome';
 import { componentVisibility } from '../page-functions/componentVisibility';
+import { addItem } from '../page-functions/addItem';
+import { removeItem } from '../page-functions/removeItem';
 
 export function startHome(): void {
   const home = document.getElementById('fullList')!;
@@ -25,4 +27,18 @@ export function startHome(): void {
   componentVisibility('saveOrder', 'hide');
   placeCategoriesHome(categoriesDB, home);
   placeProductsHome(newOrder);
+
+  document.querySelectorAll('.addBtn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const itemId = btn.id.replace('add-', '');
+      addItem(itemId);
+    });
+  });
+
+  document.querySelectorAll('.removeBtn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const itemId = btn.id.replace('remove-', '');
+      removeItem(itemId);
+    });
+  });
 }

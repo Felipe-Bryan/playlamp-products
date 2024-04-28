@@ -1,6 +1,6 @@
-import { ItemToOrderType } from '../../types/ItemToOrderType';
-import { getStorageData } from '../general/getStorageData';
-import { saveToStorage } from '../general/saveToStorage';
+import { getStorageData } from '../../../functions/general/getStorageData';
+import { saveToStorage } from '../../../functions/general/saveToStorage';
+import { ItemToOrderType } from '../../../types/ItemToOrderType';
 
 export function removeItem(id: string): void {
   let order: ItemToOrderType[] = getStorageData('order');

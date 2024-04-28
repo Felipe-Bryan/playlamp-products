@@ -1,13 +1,13 @@
+import { startNewOrder } from './functions/startNewOrder';
+import { placeCategoriesHome } from './functions/placeCategoriesHome';
+import { placeProductsHome } from './functions/placeProductsHome';
+import { addItem } from './functions/addItem';
+import { removeItem } from './functions/removeItem';
 import { categoriesDB } from '../../database/categories';
 import { productsDB } from '../../database/products';
+import { getStorageData } from '../../functions/general/getStorageData';
+import { componentVisibility } from '../../functions/page-functions/componentVisibility';
 import { ItemToOrderType } from '../../types/ItemToOrderType';
-import { getStorageData } from '../general/getStorageData';
-import { startNewOrder } from '../page-functions/startNewOrder';
-import { placeCategoriesHome } from '../page-functions/placeCategoriesHome';
-import { placeProductsHome } from '../page-functions/placeProductsHome';
-import { componentVisibility } from '../page-functions/componentVisibility';
-import { addItem } from '../page-functions/addItem';
-import { removeItem } from '../page-functions/removeItem';
 
 export function startHome(): void {
   const home = document.getElementById('fullList')!;
@@ -25,6 +25,7 @@ export function startHome(): void {
   componentVisibility('orderTable', 'hide');
   componentVisibility('home', 'hide');
   componentVisibility('saveOrder', 'hide');
+
   placeCategoriesHome(categoriesDB, home);
   placeProductsHome(newOrder);
 

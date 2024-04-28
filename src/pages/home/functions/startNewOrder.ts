@@ -1,6 +1,6 @@
-import { ItemToOrderType } from '../../types/ItemToOrderType';
-import { ProductType } from '../../types/ProductType';
-import { saveToStorage } from '../general/saveToStorage';
+import { saveToStorage } from '../../../functions/general/saveToStorage';
+import { ItemToOrderType } from '../../../types/ItemToOrderType';
+import { ProductType } from '../../../types/ProductType';
 
 export function startNewOrder(productArray: ProductType[]): ItemToOrderType[] {
   let array: ItemToOrderType[] = [];

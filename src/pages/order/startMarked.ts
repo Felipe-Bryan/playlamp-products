@@ -1,7 +1,7 @@
-import { getStorageData } from '../general/getStorageData';
-import { componentVisibility } from '../page-functions/componentVisibility';
-import { placeMarkedProducts } from '../page-functions/placeMarkedProducts';
-import { sumTotalOrder } from '../page-functions/sumTotalOrder';
+import { getStorageData } from '../../functions/general/getStorageData';
+import { componentVisibility } from '../../functions/page-functions/componentVisibility';
+import { placeMarkedProducts } from './functions/placeMarkedProducts';
+import { sumTotalOrder } from './functions/sumTotalOrder';
 
 export function startMarked(): void {
   const listItems = document.getElementById('listItems')!;

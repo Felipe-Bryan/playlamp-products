@@ -1,7 +1,7 @@
 import { productsDB } from './database/products';
-import { startNewOrder } from './functions/page-functions/startNewOrder';
-import { startHome } from './functions/pages/startHome';
-import { startMarked } from './functions/pages/startMarked';
+import { startNewOrder } from './pages/home/functions/startNewOrder';
+import { startHome } from './pages/home/startHome';
+import { startMarked } from './pages/order/startMarked';
 
 startHome();
 

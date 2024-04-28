@@ -5,16 +5,20 @@ import { ProductType } from '../../../types/ProductType';
 export function startNewOrder(productArray: ProductType[]): ItemToOrderType[] {
   let array: ItemToOrderType[] = [];
 
-  productArray.forEach((product) => {
-    const newItem = {
-      ...product,
-      qt: 0,
-    };
+  let choice: boolean = confirm('O pedido atual será apagado, continuar?');
 
-    array.push(newItem);
-  });
+  if (choice) {
+    productArray.forEach((product) => {
+      const newItem = {
+        ...product,
+        qt: 0,
+      };
 
-  saveToStorage('order', array);
+      array.push(newItem);
+    });
+
+    saveToStorage('order', array);
+  }
 
   return array;
 }
